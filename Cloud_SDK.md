@@ -1,6 +1,6 @@
 # Google-Cloud
 
-Interactive installation (Google Cloud SDK installer)
+#Interactive installation (Google Cloud SDK installer)
 #For Linux:
 #Install Python
 sudo app-get install python2.7

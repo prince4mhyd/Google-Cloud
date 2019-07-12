@@ -56,3 +56,61 @@ kubectl get deployments
 KUBE_EDITOR="nano" kubectl edit deployment <Deployment_Name>
 # To edit the replicas to scale the pods
 kubectl scale deployments <Deployment_Name> --replicas=3
+
+# To watch the activites of the pod
+kubectl get pod <Pod_Name> --watch
+# To get the process Id of the pod
+ps aux
+# To kill the process
+kill <Process_ID>
+# To vget the list of storage units
+gcloud compute disks list
+# Convert to encode format
+echo -n 'my-app' | base64
+# Create configMaps from files
+kubectl create configmaps <configMap Name> -from-file=file.txt -from-file=file2.txt
+
+# Few notes
+GKE: Google Kubernetes Engine
+Infra on GCE Virtual machines
+GCE: Google Compute Engine (IaaS)
+
+using kubectl
+
+Hybrid = On-prem + Public Cloud
+	On-premise: bare metal or VMs
+	Legacy infra, large on-prem datacenters
+	Medium-term importance
+Multi-Cloud
+	More than 1 public cloud provider
+	
+IaaS
+AWS Elastic Compute Cloud (EC2)
+GCP Compute Engine (GCE)
+
+PaaS
+AWS Elastic Beanstalk
+GCP App Engine
+
+Volume:
+awsElasticBlockStore
+gcePersistentDisk
+
+Kube Control (kubectl)
+
+kubefed -> Administer federated clusters
+Federated Cluster -> group of multiple clusters (multiple-cloud or hybrid)
+
+Imperativec commands (No .yaml or config files)
+kubectl run ...
+kubectl expose ...
+kubectl autoscale ...
+
+Imperative Object Configuration (kubectl + yaml or config files used)
+kubectl create -f config.yaml
+kubectl replace -f config.yaml
+kubectl delete -f config.yaml
+
+Declarative Object Configuration (Only .yaml or config files used)
+kubectl apply -f config.yaml
+

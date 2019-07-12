@@ -114,3 +114,7 @@ kubectl delete -f config.yaml
 Declarative Object Configuration (Only .yaml or config files used)
 kubectl apply -f config.yaml
 
+# env variable as a key-value pair in a configmap
+kubectl create configmap <ConfigMap_Name> --from-literal=special.how=very
+
+
